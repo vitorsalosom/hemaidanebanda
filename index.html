@@ -483,8 +483,7 @@ footer small{font-size:.78rem;display:block;line-height:1.7}
         <a class="btn btn-outline" href="#fotos">Ver as fotos</a>
       </div>
       <div class="hero-chips">
-        <span class="chip">Axé</span><span class="chip">Samba de raiz</span><span class="chip">Samba rock</span>
-        <span class="chip">Forró</span><span class="chip">Pop rock</span><span class="chip">Funk soul</span><span class="chip">Reggae</span>
+        <span class="chip">Brasilidade</span><span class="chip">Axé</span><span class="chip">Pop</span><span class="chip">Nova MPB</span>
       </div>
     </div>
     <div class="hero-media">
@@ -805,8 +804,18 @@ footer small{font-size:.78rem;display:block;line-height:1.7}
   /* ---- marquee ---- */
   var words = ['Brasilidade','Axé','Pop','Nova MPB'];
   var mq = document.getElementById('mq');
-  var html = words.map(function(w){ return '<span>'+w+'</span>'; }).join('');
-  mq.innerHTML = html + html;
+  var oneSet = words.map(function(w){ return '<span>'+w+'</span>'; }).join('');
+  // repeat the word list enough times so one full "lap" is at least as wide
+  // as the viewport - otherwise the 50% translateX loop shows a blank gap
+  var minWidth = Math.max(window.innerWidth, document.documentElement.clientWidth) * 1.2;
+  var reps = 1;
+  mq.innerHTML = oneSet;
+  while (mq.scrollWidth < minWidth && reps < 20) {
+    reps++;
+    mq.innerHTML += oneSet;
+  }
+  var lap = mq.innerHTML;
+  mq.innerHTML = lap + lap;
 
   /* ---- header ---- */
   var hdr = document.getElementById('hdr');
