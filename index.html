@@ -173,7 +173,7 @@ header.solid .nav .brand img{height:34px}
 .caraiva p + p{margin-top:1rem}
 
 /* ---------- agenda 2026 ---------- */
-.agenda{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin:2.8rem 0 3.2rem}
+.agenda{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin:2.8rem 0 3.2rem}
 .ag{
   background:#fff;border-radius:var(--radius);padding:1.5rem 1.6rem 1.6rem;
   box-shadow:0 10px 30px -20px rgba(14,94,99,.55);border-top:5px solid var(--turq);
@@ -181,6 +181,7 @@ header.solid .nav .brand img{height:34px}
 }
 .ag:nth-child(2){border-top-color:var(--yellow)}
 .ag:nth-child(3){border-top-color:var(--coral)}
+.ag:nth-child(4){border-top-color:var(--green)}
 .ag:hover{transform:translateY(-5px)}
 .ag-when{
   display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
@@ -389,7 +390,7 @@ footer small{font-size:.78rem;display:block;line-height:1.7}
 /* ---------- responsive ---------- */
 @media (max-width:940px){
   .about,.contact-grid,.hero-grid,.caraiva-grid,.feature{grid-template-columns:1fr}
-  .agenda{grid-template-columns:1fr}
+  .agenda{grid-template-columns:repeat(2,1fr)}
   .feature-media img{min-height:240px;max-height:300px}
   .rblocks{grid-template-columns:1fr}
   .members{grid-template-columns:repeat(2,1fr)}
@@ -415,6 +416,7 @@ footer small{font-size:.78rem;display:block;line-height:1.7}
   .nav > .btn{display:none}
 }
 @media (max-width:620px){
+  .agenda{grid-template-columns:1fr}
   .stats{grid-template-columns:1fr;gap:.7rem}
   .stat{display:flex;align-items:baseline;gap:.8rem}
   .stat b{font-size:1.35rem}
@@ -569,22 +571,25 @@ footer small{font-size:.78rem;display:block;line-height:1.7}
 
     <div class="agenda">
       <article class="ag rv">
-        <span class="ag-when">Janeiro</span>
-        <h3>Réveillon de Itaúnas</h3>
-        <p>Itaúnas &middot; Espírito Santo</p>
-        <span class="ag-note">Abertura do ano</span>
-      </article>
-      <article class="ag rv">
-        <span class="ag-when">Verão</span>
-        <h3>Caraivana convida BNegão</h3>
+        <span class="ag-when">29 Ago</span>
+        <h3>Casamento</h3>
         <p>Caraíva &middot; Bahia</p>
-        <span class="ag-note">Show de abertura</span>
+        <span class="ag-note">Evento privado</span>
       </article>
       <article class="ag rv">
-        <span class="ag-when">Abril</span>
-        <h3>Confia na Bahia</h3>
-        <p>Goiânia &middot; Goiás</p>
-        <span class="ag-note">Fora do eixo BA/ES</span>
+        <span class="ag-when">04 Set</span>
+        <h3>Itaúnas e Sabores</h3>
+        <p>Conceição da Barra &middot; Espírito Santo</p>
+      </article>
+      <article class="ag rv">
+        <span class="ag-when">05 Set</span>
+        <h3>Festival do Caranguejo</h3>
+        <p>Conceição da Barra &middot; Espírito Santo</p>
+      </article>
+      <article class="ag rv">
+        <span class="ag-when">25 Set</span>
+        <h3>Pocar Festival de Cultura</h3>
+        <p>Arraial d'Ajuda &middot; Bahia</p>
       </article>
     </div>
 
@@ -598,6 +603,9 @@ footer small{font-size:.78rem;display:block;line-height:1.7}
       <span class="venue"><i></i>Pocar Festival de Cultura &middot; Conceição da Barra, ES</span>
       <span class="venue"><i></i>Botecos da Praia &middot; Conceição da Barra, ES</span>
       <span class="venue"><i></i>Festival de Música de Barzinho</span>
+      <span class="venue"><i></i>Réveillon de Itaúnas &middot; Itaúnas, ES</span>
+      <span class="venue"><i></i>Caraivana &middot; Caraíva, BA</span>
+      <span class="venue"><i></i>Confia na Bahia &middot; Goiânia, GO</span>
       <span class="venue"><i></i>Eventos privados e casamentos</span>
     </div>
 
